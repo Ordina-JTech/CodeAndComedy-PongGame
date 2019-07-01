@@ -1,0 +1,32 @@
+micronaut:
+  server:
+    cors:
+      enabled: true
+    maxRequestSize: 1MB
+    netty:
+      maxHeaderSize: 500KB
+      worker:
+        threads: 1
+      parent:
+        threads: 1
+      childOptions:
+        autoRead: true
+
+  application:
+    name: game-host
+
+    datasources:
+      default:
+        url: ${JDBC_URL:`jdbc:h2:mem:default;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE`}
+        username: ${JDBC_USER:sa}
+        password: ${JDBC_PASSWORD:""}
+        driverClassName: ${JDBC_DRIVER:org.h2.Driver}
+jpa:
+  default:
+    packages-to-scan:
+    - 'nl.ordina'
+    properties:
+      hibernate:
+        hbm2ddl:
+          auto: update
+        show_sql: true

@@ -1,0 +1,33 @@
+<div class="container" #container [style.background-image]="getBackground()">
+    <div *ngIf="!gameIsStarted">
+        <h1 class="logo-container">
+            <img class="logo" src="../assets/images/C&C-logo_website.png" alt="Code &amp; Comedy">
+        </h1>
+        <div class="content-container">
+            <div class="message-container">
+                <p class="orange-text message-mobile">{{ message }}</p>
+                <p class="grey-text message-mobile">{{ subMessage }}</p>
+            </div>
+        </div>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+        <a *ngIf="gameIsReady && paddle === 'left'" (click)="startGame()">
+            <img class="start-button" src="../../assets/images/start_button.png" alt="Start">
+        </a>
+    </div>
+    <div class="controls_container" *ngIf="gameIsStarted && !winner">
+        <mat-grid-list [cols]="calcCols()" rowHeight="fit" gutterSize="3px">
+            <mat-grid-tile>
+                <button class="control_button" *ngIf="paddle" (touchend)="pressUp(false)" (touchstart)="pressUp(true)">
+                    <mat-icon svgIcon="arrow_up"></mat-icon>
+                </button>
+            </mat-grid-tile>
+            <mat-grid-tile>
+                <button class="control_button" *ngIf="paddle" (touchend)="pressDown(false)"
+                        (touchstart)="pressDown(true)">
+                    <mat-icon svgIcon="arrow_down"></mat-icon>
+                </button>
+            </mat-grid-tile>
+        </mat-grid-list>
+    </div>
+</div>
+

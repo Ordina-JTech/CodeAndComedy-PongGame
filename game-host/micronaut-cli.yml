@@ -1,0 +1,5 @@
+profile: service
+defaultPackage: nl.ordina
+---
+testFramework: spek
+sourceLanguage: kotlin

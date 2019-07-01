@@ -1,0 +1,41 @@
+<div class="join-component">
+    <h1 class="title">Enter Username<br/>&amp;<br/>Game PIN</h1>
+    <div class="error-container">
+        <div class="required">
+            <p *ngIf="message">
+                {{ message }}
+            </p>
+        </div>
+    </div>
+
+    <form [formGroup]="angForm" novalidate>
+        <div class="error-container">
+            <div class="required" *ngIf="angForm.controls['username'].invalid
+        && (angForm.controls['username'].dirty || angForm.controls['username'].touched)">
+                <p *ngIf="angForm.controls['username'].errors.required">
+                    Username is required.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <input class="form-control" formControlName="username" placeholder="Username" required>
+        </div>
+
+        <div class="error-container">
+            <div class="required" *ngIf="angForm.controls['gamepin'].invalid
+        && (angForm.controls['gamepin'].dirty || angForm.controls['gamepin'].touched)">
+                <p *ngIf="angForm.controls['gamepin'].errors.required">
+                    Game pin is required.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <input class="form-control" formControlName="gamepin" placeholder="Game PIN" required>
+        </div>
+        <button type="submit" [disabled]="!angForm.valid"
+                (click)="registerUser(angForm.value['username'], angForm.value['gamepin']);">
+            <img class="join-button" src="assets/images/join_button.png" alt="Join">
+        </button>
+    </form>
+
+</div>

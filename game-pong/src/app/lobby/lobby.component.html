@@ -1,0 +1,37 @@
+<div class="border-container">
+    <div class="container">
+        <h1 class="logo-container">
+            <img class="logo" src="../assets/images/C&C-logo_website.png" alt="Code &amp; Comedy">
+        </h1>
+        <div class="lobby">
+            <div class="info-container">
+                <h1 class="orange-text">Join at codeandcomedy.nl/games</h1>
+                <h2 class="grey-text">with Game PIN: {{ currentGameId }}</h2>
+                <h3 class="grey-text">{{ displayMessage }}</h3>
+                <p class="grey-text" *ngIf="lobbyIsFull"> Waiting for
+                    <strong class="player-start">{{ players[0].name }}</strong>
+                    to press start</p>
+            </div>
+
+            <div class="lobby-container">
+                <div class="lobby-title">
+                    <h4 class="orange-text big-font">Lobby</h4>
+                </div>
+
+                <div class="players-container">
+                    <ul class="player-list">
+                        <li *ngFor="let player of players">
+                            <div class="player-container">
+                                {{ player.name }}
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>

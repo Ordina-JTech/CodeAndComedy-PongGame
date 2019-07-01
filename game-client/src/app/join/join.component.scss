@@ -1,0 +1,42 @@
+.join-component {
+    text-align: center;
+    margin-top: 20px;
+
+    .title {
+        font-size: 1.5rem;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.join-button {
+    width: 25%;
+    margin-top: 10px;
+}
+
+.required p {
+    font-size: 12pt;
+    color: red;
+    margin: 0;
+}
+
+.form-group {
+    margin: 0;
+}
+
+.error-container {
+    height: 22px;
+}
+
+.center-block {
+    width: 90%;
+}
+
+
+.form-control{
+    margin: 0 auto;
+    width: 90%;
+}

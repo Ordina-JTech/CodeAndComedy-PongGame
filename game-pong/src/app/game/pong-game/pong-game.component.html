@@ -1,0 +1,18 @@
+<div class="container" #GameContainer>
+    <div class="score-container">
+        <p class="player-score">
+            <strong class="player-left">{{ pongGame.getLeftPaddle().getPlayer().name }} -
+                Score: {{ pongGame.getLeftPaddleScore() }}</strong>
+            <strong class="player-right">{{ pongGame.getRightPaddle().getPlayer().name }} -
+                Score: {{ pongGame.getRightPaddleScore() }}</strong>
+        </p>
+    </div>
+
+    <div class="game-container">
+        <div class="message" *ngIf="message" >
+            <h1>{{ message }}</h1>
+            <h2>{{ winner }}</h2>
+        </div>
+        <canvas #PongCanvas class="canvas" width="{{ width }}" height="{{ height }}"></canvas>
+    </div>
+</div>

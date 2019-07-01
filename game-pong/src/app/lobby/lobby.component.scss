@@ -1,0 +1,66 @@
+@import "../../assets/stylings/styles/global-styles";
+
+.container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    background: white;
+}
+.lobby {
+    height: 100%;
+}
+.info-container {
+    height: 33%;
+    text-align: center;
+    padding: 0;
+}
+.lobby-container {
+    text-align: center;
+    padding: 0;
+}
+.lobby-title {
+    text-align: center;
+    .big-font {
+        margin: 0 auto;
+    }
+}
+.players-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.player-list {
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    width: 90%;
+    align-content: stretch;
+}
+
+.player-start {
+    color: $player-left;
+}
+
+ul>li{
+    font-size: 1.5vw;
+}
+li:first-child {
+    color: $player-left;
+    flex-grow: 1;
+    .player-container {
+        text-align: left;
+    }
+}
+li:nth-child(2) {
+    color: $player-right;
+    flex-grow: 1;
+    .player-container {
+        text-align: right;
+    }
+}
+
+

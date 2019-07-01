@@ -1,0 +1,54 @@
+@import "../../assets/stylings/styles/global-styles";
+
+.container {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: top;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.content-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.message-container {
+    width: 90%;
+    text-align: center;
+}
+.message-mobile{
+    font-size: 5.5vw;
+}
+
+.start-button {
+    width: 30%;
+    margin-left: 35%;
+    margin-top: 25%;
+}
+
+mat-grid-list {
+    height: 100%;
+    background: $dark-grey;
+}
+
+.controls_container {
+    width: 100%;
+    height: 100%;
+}
+.control_button {
+    width: 100%;
+    height: 100%;
+    background: $orange;
+    border: 0;
+}
+mat-icon {
+    width: 200px;
+    height: 200px;
+    color: $dark-grey;
+}
+

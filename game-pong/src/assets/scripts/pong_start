@@ -1,0 +1,6 @@
+#!/bin/bash
+
+ipaddress=$( ipconfig getifaddr en0 )
+echo ipaddress is: $ipaddress
+cd game-pong/
+ng serve --host $ipaddress
